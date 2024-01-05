@@ -1,0 +1,21 @@
+name: 完整性检查
+
+on:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  check_apk:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 检查文件完整性
+      run: |
+        if [ $(find . -name "*.apk" | wc -l) -gt 0 ]; then
+          echo "项目出错，检查完毕"
+          exit 1
+        else
+          echo "检查完毕，项目良好"
+        fi
