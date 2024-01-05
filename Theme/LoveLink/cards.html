@@ -1,0 +1,47 @@
+{include file="LoveLink/public/header"}
+
+<div id="jsParameter" jsPageHierarchy=0 jsTabClass="{if $cardsModel == 0}2{else}1{/if}" class="content-page">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- 卡片循环 -->
+            {include file="LoveLink/public/component-list-cards"}
+        </div>
+    </div>
+</div>
+
+<div class="card-body" >{$cardsListRaw|raw}
+    <ul class="list-inline p-0 m-0 text-center">
+        <li class="mb-2">
+            
+                 <button id="pageFirst" type="button" class="button btn button-icon bg-primary">上一页</button>
+                 <button id="pageLast" type="button" class="button btn button-icon bg-primary">下一页</button>
+        </li>
+    </ul>
+</div>
+
+{include file="LoveLink/public/public"}
+<script>
+    $(function () {
+        //初始化分页
+        pager();
+        //获取Tag数据
+    })
+</script>
+<style>
+    .zoomImage {
+        width: 100%;
+        height: 0;
+        padding-bottom: 50%;
+        overflow: hidden;
+        background-position: center center;
+        background-repeat: no-repeat;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+    }
+</style>
+{include file="LoveLink/public/footer"}
+
+</body>
+
+</html>

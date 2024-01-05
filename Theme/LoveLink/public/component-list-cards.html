@@ -1,0 +1,116 @@
+{volist name='cardsListData' id='data'}
+<!--判断Model-->
+{if $data.model == 0}
+{if $data.woName}
+<div class="col-md-6 col-lg-4 col-sm-6">
+    <div class="card">
+        {if $data.img}
+        <div class="zoomImage">
+            <img src="{$data.img}" class="card-img-top js-jumpurl-cardId" alt="{$data.id}">
+        </div>
+        {/if}
+        <div class="card-body">
+            <h4 class="card-title">{$data.woName} de表白卡</h4>
+            <p class="card-text"><a class="mt-2 badge border border-primary text-primary">{$data.woName} 表白
+                    {$data.taName}</a></p>
+            <p class="card-text js-jumpurl-cardId" value='{$data.id}'>{$data.content}</p>
+            <p class="card-text"><small class="text-muted">浏览 {$data.look}</small></p>
+            {if $data.ipGood == false}
+            <button value="{$data.id}" class="js-Btn-Update-CardsGood btn btn-primary">
+                点赞 {$data.good}
+            </button>
+            {else}
+            <button value="{$data.id}" class="btn btn-primary">
+                已点赞 {$data.good}
+            </button>
+            {/if}
+            &emsp;
+            <a class="js-jumpurl-cardId card-link" value='{$data.id}'>评论 {$data.comments}</a>
+            <!--<footer class="blockquote-footer text-right">
+                           <small class="text-muted">
+                        <cite title="Source Title">Source Title</cite>
+                           </small>
+        </footer>-->
+        </div>
+    </div>
+</div>
+{else}
+<div class="col-md-6 col-lg-4 col-sm-6">
+    <div class="card">
+        {if $data.img}
+        <img src="{$data.img}" class="card-img-top js-jumpurl-cardId" alt="{$data.id}">
+        {/if}
+        <div class="card-body">
+            <h4 class="card-title">匿名 de表白卡</h4>
+            <p class="card-text">表白 <a>{$data.taName}</a></p>
+            <p class="card-text js-jumpurl-cardId" value='{$data.id}'>{$data.content}</p>
+            <p class="card-text"><small class="text-muted">浏览 {$data.look}</small></p>
+            {if $data.ipGood == false}
+            <button value="{$data.id}" class="js-Btn-Update-CardsGood btn btn-primary">
+                点赞 {$data.good}
+            </button>
+            {else}
+            <button value="{$data.id}" class="btn btn-primary">
+                已点赞 {$data.good}
+            </button>
+            {/if}
+            &emsp;
+            <a class="js-jumpurl-cardId card-link" value='{$data.id}'>评论 {$data.comments}</a>
+        </div>
+    </div>
+</div>
+{/if}
+{else}
+{if $data.woName}
+<div class="col-md-6 col-lg-4 col-sm-6">
+    <div class="card">
+        {if $data.img}
+        <img src="{$data.img}" class="card-img-top js-jumpurl-cardId" alt="{$data.id}">
+        {/if}
+        <div class="card-body">
+            <h4 class="card-title">{$data.woName} 的交流卡</h4>
+            <p class="card-text"><a>{$data.woName}</a> <a>{if $data.taName}</a>对 <a>{$data.taName}</a>{/if} 说</p>
+            <p class="card-text js-jumpurl-cardId" value='{$data.id}'>{$data.content}</p>
+            <p class="card-text"><small class="text-muted">浏览 {$data.look}</small></p>
+            {if $data.ipGood == false}
+            <button value="{$data.id}" class="js-Btn-Update-CardsGood btn btn-primary">
+                点赞 {$data.good}
+            </button>
+            {else}
+            <button value="{$data.id}" class="btn btn-primary">
+                已点赞 {$data.good}
+            </button>
+            {/if}
+            &emsp;
+            <a class="js-jumpurl-cardId card-link" value='{$data.id}'>评论 {$data.comments}</a>
+        </div>
+    </div>
+</div>
+{else}
+<div class="col-md-6 col-lg-4 col-sm-6">
+    <div class="card">
+        {if $data.img}
+        <img src="{$data.img}" class="card-img-top js-jumpurl-cardId" alt="{$data.id}">
+        {/if}
+        <div class="card-body">
+            <h4 class="card-title">匿名的交流卡</h4>
+            <p class="card-text">{if $data.taName}对 {$data.taName}{/if} 说</p>
+            <p class="card-text js-jumpurl-cardId" value='{$data.id}'>{$data.content}</p>
+            <p class="card-text"><small class="text-muted">浏览 {$data.look}</small></p>
+            {if $data.ipGood == false}
+            <button value="{$data.id}" class="js-Btn-Update-CardsGood btn btn-primary">
+                点赞 {$data.good}
+            </button>
+            {else}
+            <button value="{$data.id}" class="btn btn-primary">
+                已点赞 {$data.good}
+            </button>
+            {/if}
+            &emsp;
+            <a class="js-jumpurl-cardId card-link" value='{$data.id}'>评论 {$data.comments}</a>
+        </div>
+    </div>
+</div>
+{/if}
+{/if}
+{/volist}

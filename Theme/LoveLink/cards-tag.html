@@ -1,0 +1,60 @@
+{include file="LoveLink/public/header"}
+
+<!-- 页体 -->
+<div id="jsParameter" jsPageHierarchy=0 jsTabClass="0" class="content-page">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="alert text-white bg-primary" role="alert">
+                    <div class="iq-alert-text"><b> 公告栏：</b> alert—check it out!</div>
+                </div>
+            </div>
+            <div id="jsParameter" jsPageHierarchy=1 jsTabClass="3" class="mdui-container mdui-p-t-2">
+
+                <div class="mdui-p-t-2">
+                    <div class="mdui-typo-headline-opacity">
+                        关于
+                        <div class="mdui-chip">
+                            <span class="mdui-chip-title">{$searchValue}</span>
+                        </div> 的合集
+                    </div>
+                </div>
+
+                <!-- 主体组件 -->
+                <div id="jsMainComp" class="mdui-m-t-2">
+
+                    <div class="mdui-row-xs-1 mdui-row-sm-2 mdui-row-md-3 mdui-row-lg-3">
+                        <!-- 卡片循环 -->
+                        {include file="index/public/component-list-cards"}
+                        <!-- 分享弹窗 -->
+                        {include file="index/public/component-share"}
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+{include file="LoveLink/public/public"}
+<script>
+    $(function () {
+        //初始化-分页组件
+        pager();
+        //初始化-Tag组件
+        ViewCardsTag('{$cardsTagData|raw}');
+        //初始化-View-搜索
+        if (getUrlParam('value')) {
+            $('#SearchValue').html('')
+        }
+    });
+
+    //表单-按钮-搜索
+    $('#requestSearch').click(function () {
+        jumpUrl('/index/Cards/search?search=true&model=0&value=' + $('#SearchValue').val(), 0);
+    });
+</script>
+
+{include file="index/public/footer"}
+</body>
+
+</html>

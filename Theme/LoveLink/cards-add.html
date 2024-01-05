@@ -1,0 +1,232 @@
+{include file="LoveLink/public/header"}
+<div id="jsParameter" jsPageHierarchy=1 jsTabClass="{if $cardsModel == 0}2{else}1{/if}" class="content-page">
+   <div class="container-fluid">
+      <div class="row">
+         <div class="col-sm-12 col-lg-6 col-md-6">
+            <div class="card">
+               <div class="card-header d-flex justify-content-between">
+                  <div class="header-title">
+                     <h4 class="card-title">添加交流卡</h4>
+                  </div>
+               </div>
+               <div class="card-body">
+                  <label for="basic-url">Notice：*为必填项</label>
+                  <div class="input-group mb-4">
+                     <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">😎</span>
+                     </div>
+                     <input type="text" id="woName" class="form-control" placeholder="你的称呼" aria-label="你的称呼"
+                        aria-describedby="basic-addon1">
+                  </div>
+                  <div class="input-group mb-4">
+                     <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">QQ</span>
+                     </div>
+                     <input type="text" id="woContact" class="form-control" placeholder="联系方式" aria-label="联系方式"
+                        aria-describedby="basic-addon1">
+                  </div>
+                  <div class="input-group mb-4">
+                     <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">@</span>
+                     </div>
+                     <input type="text" id="taName" class="form-control" placeholder="TA的姓名(与谁交流)"
+                        aria-label="TA的姓名(与谁交流)" aria-describedby="basic-addon1">
+                  </div>
+                  <div class="input-group mb-4">
+                     <div class="input-group-prepend">
+                        <label class="input-group-text" for="inputGroupSelect01">标签</label>
+                     </div>
+                     <select class="custom-select" id="inputGroupSelect01">
+                        {volist name="cardsTagData" id="data"}
+                        <option value="{$data.id}">{$data.name}</option>
+                        {/volist}
+                     </select>
+                  </div>
+                  {if $cardsModel == 0}
+                  <div class="input-group">
+                     <div class="input-group-prepend">
+                        <span class="input-group-text text-area">表白写些什么*</span>
+                     </div>
+                     <textarea id="content" class="form-control" aria-label="表白写些什么*"></textarea>
+                  </div>
+                  {else}
+                  <div class="input-group mb-4">
+                     <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">QQ</span>
+                     </div>
+                     <input type="text" id="taContact" class="form-control" placeholder="TA的联系方式" aria-label="TA的联系方式"
+                        aria-describedby="basic-addon1">
+                  </div>
+                  <div class="input-group">
+                     <div class="input-group-prepend">
+                        <span class="input-group-text text-area">表白写些什么*</span>
+                     </div>
+                     <textarea id="content" class="form-control" aria-label="表白写些什么*"></textarea>
+                  </div>
+                  {/if}
+                  <br>
+
+                  <div id="model" value="{$cardsModel}" class="mdui-card-actions">
+                     <button id="submitAdd" type="button"
+                        class="btn btn-primary btn-block">提交</button>
+                  </div>
+               </div>
+
+            </div>
+         </div>
+         <div class="col-sm-12 col-lg-6 col-md-6">
+            <div class="card">
+               <div class="card-header d-flex justify-content-between">
+                  <div class="header-title">
+                     <h4 class="card-title">附加选项-图片</h4>
+                  </div>
+               </div>
+               <div class="card-body">
+                  <div id="listImageUrl">
+                     <!-- 图片容器 -->
+                  </div>
+                  
+                  <div class="input-group mb-3" id="dialogUploadImage">
+                        <div class="input-group-prepend">
+                           <span class="input-group-text" id="basic-addon3">Url</span>
+                        </div>
+                        <input type="text" placeholder="最多上传9张10M图片 或 http(s)://" class="form-control" id="urlUpdataImage" aria-describedby="basic-addon3">
+                  </div>
+                  <label id="btnUploadImage" class="btn btn-outline-secondary" >
+                   <span>点击上传</span>
+                   <input id="dataUpdataImage" type="file" style="display: none;" />
+                  </label>
+                  &ensp;
+                  <button type="button" id="nwebtnUpdataImgUrl" class="btn btn-primary" data-toggle="button"
+                     aria-pressed="false">
+                     确认提交
+                  </button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+
+
+{include file="LoveLink/public/public"}
+<script src="{__A-assets__}/cardsEdit.js"></script>
+{if $configData.geetest.DefSetValidatesStatus == 1}
+<script src="https://static.geetest.com/v4/gt4.js"></script>
+<script src="{__A-assets__}/gt4/base.js"></script>
+{/if}
+<script>
+   //按钮-图片上传
+   $('#newbtnUploadImage').change(function () {
+      var formData = new FormData();
+      formData.append('file', dataUpdataImage.files[0]);
+      $('#newbtnUploadImage').find('span').text('正在上传');
+      //提交数据
+      var result = apiAjax1(formData, apiUrlUploadImage, 'POST');
+      if (result) {
+         //成功
+         mdui.snackbar({
+            message: '上传成功',
+            position: 'left-top'
+         });
+         $('#urlUpdataImage').val('/storage/' + result.data);
+         $('#newbtnUploadImage').find('span').text('/storage/' + result.data);
+         return;
+      } else {
+         $('#newbtnUploadImage').find('span').text('上传失败，请重试');
+         return;
+      }
+   });
+
+   //按钮-加载图片组件
+   $('#nwebtnUpdataImgUrl').click(function () {
+      var urlUpdataImage = $('#urlUpdataImage').val();
+      console.log(checkChooseTagId)
+      if (checkUrl(urlUpdataImage)) {
+         //限制图片个数
+         if ($('#listImageUrl').children().length >= DefSetCardsImgNum) {
+            mdui.snackbar({
+               message: '超过上传限制',
+               position: 'left-top'
+            });
+            return;
+         }
+         //添加图片到位置
+         $('#listImageUrl').append(`
+            <div class="mdui-col mdui-p-b-1">
+                <div class="mdui-grid-tile">
+                    <div class="css-cardsAdd-img">
+                        <img class="js-url-UpdataImage" src="${urlUpdataImage}">
+                        <div class="mdui-cardAdd-menu">
+                            <button class="mdui-btn mdui-btn-icon js-btn-delete-UrlUpdataImage">
+                                <i class="mdui-icon material-icons" style="padding:unset;">clear</i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `);
+      } else {
+         mdui.snackbar({
+            message: 'URL不合法，请重试',
+            position: 'left-top'
+         });
+      }
+      //重置Url输入框
+      $('#urlUpdataImage').val('');
+      //删除按钮再次初始化
+      $('.js-btn-delete-UrlUpdataImage').click(function () {
+         $(this).parent().parent().parent().parent().remove();
+      });
+   })
+
+   $(function () {
+      //提交
+      const FunResultAdd = (CaptchaData) => {
+         //是否存在验证参数
+         var data;
+         if (CaptchaData) { data = CaptchaData; }
+
+         //构建图片url数组并获取
+         var jsonImageUrl = [];
+         $('#listImageUrl').find('.js-url-UpdataImage').each(function () {
+            jsonImageUrl.push($(this).attr('src'));
+         });
+         img = JSON.stringify(jsonImageUrl);
+         tag = JSON.stringify(checkChooseTagId);
+
+         data = {
+            ...data,//合并验证参数
+            'content': $('#content').val(),
+            'woName': $('#woName').val(),
+            'taName': $('#taName').val(),
+            'woContact': $('#woContact').val(),
+            'taContact': $('#taContact').val(),
+            'model': $('#model').attr('value'),
+            'tag': tag,
+            'img': img,
+         };
+         var result = apiAjax0a(data, apiUrlCardsAdd, 'POST');
+         if (result['r']['ec'] == 200) {
+            mdui.snackbar({
+               message: '添加成功',
+               position: 'left-top'
+            });
+            jumpUrl('/index/cards/card/id/' + result.r.data.id);
+            return;
+         } else if (result['r']['ec'] == 201) {
+            jumpUrl('/index');
+            return;
+         }
+      }
+      //验证
+      /*{if $configData.geetest.DefSetValidatesStatus == 1}*/
+      geetest4('#submitAdd', FunResultAdd, '{$configData.geetest.DefSetGeetestId}');
+      /*{else /}*/
+      $('#submitAdd').click(function () { FunResultAdd() });
+      /*{/if}*/
+   });
+</script>
+{include file="LoveLink/public/footer"}
+</body>
+</html>

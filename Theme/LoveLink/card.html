@@ -1,0 +1,172 @@
+{include file="LoveLink/public/header"}
+<div class="content-page">
+   <div class="container">
+      <div class="row">
+         <div class="col-lg-6 col-md-6 col-xl-8">
+            <div class="card card-block card-stretch card-height">
+               <div class="card-body">
+
+                  <h4 class="card-title">
+                     {if $cardsModel == 0}
+                     {if $cardData['woName']}[{$cardData['woName']} 的表白卡]-{$cardData['woName']} 表白 {$cardData['taName']}
+                     {else}[匿名 的表白卡]-对 {$cardData['taName']} 说
+                     {/if}
+                     {else}
+                     {if $cardData['woName']}[{$cardData['woName']} 的交流卡]-{$cardData['woName']} 对 {$cardData['taName']}
+                     说
+                     {else}[匿名 的交流卡]-对 {$cardData['taName']} 说
+                     {/if}
+                     {/if}
+                  </h4>
+
+                  <div class="tab-content">
+                     <div id="profile1" class="tab-pane fade active show">
+                        <p>{$cardData['id']}# {$cardData['time']}</p>
+                        <p> {$cardData['content']}</p>
+                     </div>
+                     {if $imgData}
+                     <div class="mdui-card mdui-m-t-1">
+                        <div class="mdui-m-x-1 mdui-m-t-1">
+                           <div class="mdui-row-xs-2 mdui-row-sm-3" id="viewer">
+                              {volist name="imgData" id="data"}
+                              <div class="mdui-col mdui-p-b-1">
+                                 <div class="mdui-grid-tile">
+                                    <div class="css-cardsList-img">
+                                       <img class="js-url-UpdataImage" src="{$data.url}">
+                                    </div>
+                                 </div>
+                              </div>
+                              {/volist}
+                           </div>
+                        </div>
+                     </div>
+                     {/if}
+                  </div>
+               </div>
+            </div>
+         </div>
+         
+         <div class="col-lg-6 col-md-6 col-xl-4">
+            <div class="card card-block card-stretch card-height">
+               <div class="card-body">
+                  <div class="d-flex align-items-center mb-3">
+                     <div class="profile-img position-relative">
+                        <img src="{$TemplateDirectory}/images/logo.png" class="img-fluid rounded avatar-110"
+                           alt="profile-image">
+                     </div>
+                     <div class="ml-3">
+                        <h4 class="mb-1">表白人：{if $cardData['woName']}
+                           {$cardData['woName']}
+                           {else}
+                           匿名
+                           {/if}</h4>
+                        <p class="mb-2">表白： {$cardData['taName']}</p>
+                        <a href="#" class="js-jumpurl-BackUp btn btn-primary font-size-14">回到首页</a>
+                     </div>
+                  </div>
+                  <!--Comments-->
+                  <div>
+
+                     <div>
+                        <h4>评论</h4>
+                     </div>
+                     <br>
+                     <div>
+                        <input class="form-control" type="text" placeholder="姓名" id="addCommentsDataName" />
+                     </div>
+                     <div>
+                        <br>
+                        <textarea class="form-control" placeholder="说些什么*" id="addCommentsDataContent"
+                           rows="3"></textarea>
+                     </div>
+                  </div>
+                  <br>
+                  <button id="btnAddComments" class="btn btn-primary">
+                     提交
+                  </button>
+               </div>
+            </div>
+         </div>
+         {if $cardsCommentsListData}
+         <div class="col-sm-12 col-lg-12">
+            <div class="card">
+               <div class="card-header d-flex justify-content-between">
+                  <div class="header-title">
+                     <h4 class="card-title">共{$cardData['comments']}条</h4>
+                  </div>
+               </div>
+               <div class="card-body">
+                  {volist name="cardsCommentsListData" id="data"}
+                  <p>{$data.name} 说：{$data.content}</p>
+                  {/volist}
+               </div>
+            </div>
+         </div>
+         {else}
+         <div class="col-sm-12 col-lg-12">
+            <div class="card">
+               <div class="card-header d-flex justify-content-between">
+                  <div class="header-title">
+                     <h4 class="card-title">好像还没有评论，快去灌水吧~</h4>
+                  </div>
+               </div>
+            </div>
+         </div>
+         {/if}
+      </div>
+   </div>
+</div>
+
+
+
+
+{include file="LoveLink/public/public"}
+{if $configData.geetest.DefSetValidatesStatus == 1}
+<script src="https://static.geetest.com/v4/gt4.js"></script>
+<script src="{__A-assets__}/gt4/base.js"></script>
+{/if}
+<script>
+   $(function () {
+      //初始化-分页组件
+      pager();
+      //初始化-Tag组件
+      ViewCardsTag('{$cardsTagData|raw}');
+      //viewer图片放大插件初始化
+      // $('#viewer').viewer({
+      //     url: 'src'
+      // });
+
+      //请求-按钮-评论
+      const FunAddComments = (CaptchaData) => {
+         //是否存在验证参数
+         var data;
+         if (CaptchaData) { data = CaptchaData; }
+
+         var data = {
+            ...data,//合并验证参数
+            'cid': '{$cardData.id}',
+            'name': $('#addCommentsDataName').val(),
+            'content': $('#addCommentsDataContent').val(),
+         };
+         //提交数据
+         var result = apiAjax0(data, apiUrlCardsCommentsAdd, 'POST');
+         if (result) {
+            //附加功能
+            $.cookie('msg', '评论成功', { path: '/' });//写入提示
+            //刷新页面
+            jumpUrl('', 100);
+         }
+      };
+      //验证
+      /*{if $configData.geetest.DefSetValidatesStatus == 1}*/
+      geetest4('#btnAddComments', FunAddComments, '{$configData.geetest.DefSetGeetestId}');
+      /*{else /}*/
+      $('#btnAddComments').click(function () { FunAddComments() });
+      /*{/if}*/
+   });
+
+</script>
+{include file="LoveLink/public/footer"}
+</body>
+
+</html>

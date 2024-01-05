@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="{if $viewDescription}{$viewDescription}{else}{$systemData['siteDes']}{/if}">
+    <meta name="keywords" content="{if $viewKeywords}{$viewKeywords}{else}{$systemData['siteKeywords']}{/if}">
+    <title>{$viewTitle} - {$systemData['siteName']}</title>
+    <!-- Favicon -->
+    <link rel="stylesheet" href="{$TemplateDirectory}/css/backend-plugin.min.css">
+    <link rel="stylesheet" href="{$TemplateDirectory}/css/backend.css?v=1.0.1">
+    <link rel="stylesheet" href="{$TemplateDirectory}/vendor/line-awesome/dist/line-awesome/css/line-awesome.min.css">
+    <link rel="stylesheet" href="{$TemplateDirectory}/vendor/remixicon/fonts/remixicon.css">
+    <link rel="stylesheet" href="{__A-assets__}/base.css" />
+    <link href="https://cdn.bootcdn.net/ajax/libs/mdui/1.0.2/css/mdui.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{$TemplateDirectory}/vendor/tui-calendar/tui-calendar/dist/tui-calendar.css">
+    <link rel="stylesheet" href="{$TemplateDirectory}/vendor/tui-calendar/tui-date-picker/dist/tui-date-picker.css">
+    <link rel="stylesheet" href="{$TemplateDirectory}/vendor/tui-calendar/tui-time-picker/dist/tui-time-picker.css">
+    <script>
+        var _paq = window._paq = window._paq || [];
+        _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function () {
+            var u = "//matomo.fatda.cn/";
+            _paq.push(['setTrackerUrl', u + 'matomo.php']);
+            _paq.push(['setSiteId', '9']);
+            var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+            g.async = true; g.src = u + 'matomo.js'; s.parentNode.insertBefore(g, s);
+        })();
+    </script>
+    <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+<script>LA.init({id:"KJ06mgrAoWtFlkQW",ck:"KJ06mgrAoWtFlkQW",autoTrack:true,hashMode:true})</script>
+</head>
+
+<body class="  ">
+    <!-- loader Start -->
+    <div id="loading">
+        <div id="loading-center">
+        </div>
+    </div>
+    <!-- loader END -->
+    <!-- Wrapper Start -->
+    <div class="wrapper"
+        style="background: url({$TemplateDirectory}/images/background.png); background-attachment: fixed; background-size: cover; ">
+        <div class="iq-sidebar  sidebar-default ">
+            <div class="iq-sidebar-logo d-flex align-items-center">
+                <a href="index.html" class="header-logo">
+                    <img src="{$TemplateDirectory}/images/logo.png" alt="logo">
+                    <h2 class=" light-logo">{$systemData['siteName']}</h2>
+                </a>
+                <div class="iq-menu-bt-sidebar ml-0">
+                    <i class="las la-bars wrapper-menu"></i>
+                </div>
+            </div>
+            <div class="data-scrollbar" data-scroll="1">
+                <nav class="iq-sidebar-menu">
+                    <h6 class="sidebar-text text-uppercase ">main</h6>
+                    <ul id="iq-sidebar-toggle" class="iq-menu">
+                        <li class="">
+                            <a onclick="jumpUrl('/index/',0)" class="svg-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                    fill="currentColor" width="20" height="20">
+                                    <path
+                                        d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+                                </svg>
+                                <span class="ml-3">首页</span>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a id="jsTab3Class" href="#" onclick="jumpUrl('/index/Cards/search',0)" class="svg-icon">
+                                <i class="ri-search-line"></i>
+                                <span class="ml-2">搜索</span>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a onclick="location.assign('/index/cards/add')" class="svg-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                    fill="currentColor" width="20" height="20">
+                                    <path fill-rule="evenodd"
+                                        d="M5 3a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V5a2 2 0 00-2-2H5zm9 4a1 1 0 10-2 0v6a1 1 0 102 0V7zm-3 2a1 1 0 10-2 0v4a1 1 0 102 0V9zm-3 3a1 1 0 10-2 0v1a1 1 0 102 0v-1z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span class="ml-3">添加表白卡</span>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a onclick="location.assign('/index/cards/add/model/1')" class="svg-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                    fill="currentColor" width="20" height="20">
+                                    <path fill-rule="evenodd"
+                                        d="M5 3a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2V5a2 2 0 00-2-2H5zm9 4a1 1 0 10-2 0v6a1 1 0 102 0V7zm-3 2a1 1 0 10-2 0v4a1 1 0 102 0V9zm-3 3a1 1 0 10-2 0v1a1 1 0 102 0v-1z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span class="ml-3">添加交流卡</span>
+                            </a>
+                        </li>
+                        <li>
+                            <h6 class=" text-uppercase sidebar-text">卡片分类</h6>
+                        </li>
+                        <li class=" ">
+                            <a id="jsTab2Class" href="#" onclick="jumpUrl('/index/Cards',0)">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                    fill="currentColor" width="20" height="20">
+                                    <path
+                                        d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                                </svg>
+                                <span class="ml-3">表白卡</span>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a id="jsTab1Class" href="#" onclick="jumpUrl('/index/Cards/index/model/1',0)">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                    fill="currentColor" width="20" height="20">
+                                    <path fill-rule="evenodd"
+                                        d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span class="ml-3">交流卡</span>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a id="jsTab2Class" href="#" onclick="jumpUrl('/index/Cards/index/model/2',0)">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                    fill="currentColor" width="20" height="20">
+                                    <path fill-rule="evenodd"
+                                        d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span class="ml-3">影像墙</span>
+                            </a>
+                        </li>
+                        <li class="">
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                    fill="currentColor" width="20" height="20">
+                                    <path fill-rule="evenodd"
+                                        d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z"
+                                        clip-rule="evenodd" />
+                                    <path
+                                        d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z" />
+                                </svg>
+                                <span class="ml-3">其他（未开发）</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <div id="sidebar-bottom" class="position-relative sidebar-bottom">
+                    <div class="card border-none  shadow-none">
+                        <div class="card-body rounded-pill bg-secondary">
+                            <div class="sidebarbottom-content">
+                                <div class="image"><img src="{$TemplateDirectory}/images/sidebar.png" class="img-fluid"
+                                        alt="sidebar">
+                                </div>
+                                <p class="mb-0 mt-3 text-capitalize">SHBS 社区<br> 点击按钮前往</p>
+                                <a target="_blank" href="http://community.shbsme.top">
+                                    <button type="button" class="btn sidebar-bottom-btn mt-3">点击前往</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pt-5 pb-2"></div>
+            </div>
+        </div>
+        <!--顶部菜单-->
+        <div class="iq-top-navbar">
+            <div class="iq-navbar-custom">
+                <nav class="navbar navbar-expand-lg navbar-light p-0">
+                    <div class="iq-navbar-logo d-flex align-items-center justify-content-between">
+                        <i class="ri-menu-line wrapper-menu"></i>
+                        <a href="index.html" class="header-logo">
+                            <h4 class="logo-title text-uppercase">{$systemData['siteName']}</h4>
+                        </a>
+                    </div>
+                    <div class="navbar-breadcrumb">
+                        <h2 class="ml-2">{$viewTitle}</h2>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-label="Toggle navigation">
+                            <i class="ri-menu-3-line"></i>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ml-auto navbar-list align-items-center">
+                                
+                                
+                                <li class="nav-item nav-icon dropdown caption-content">
+                                    <a href="#" class="search-toggle dropdown-toggle  d-flex align-items-center"
+                                        id="dropdownMenuButton4" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">
+                                        <div class="caption ml-3">
+                                            <h6 class="mb-0 line-height">请不要随意宣传本网站哦～
+                                            </h6>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
