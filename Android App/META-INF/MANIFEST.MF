@@ -87,6 +87,9 @@ SHA1-Digest: fJSE0nVY/aXx8gVbBmqEA4Ocoss=
 Name: res/anim/btn_radio_to_off_mtrl_ring_outer_animation.xml
 SHA1-Digest: NXdgBrCnfvejVwWnzAeE8Wro5Hg=
 
+Name: lua/chinese_module/config.json
+SHA1-Digest: UiETW9LAxNK7FgZAyecWg/8QqCs=
+
 Name: res/drawable-hdpi-v4/abc_ic_star_half_black_48dp.png
 SHA1-Digest: xgnROefed1vgMaxaqCgtRMAIU/Q=
 
@@ -250,7 +253,7 @@ Name: res/drawable-xxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.
 SHA1-Digest: dOjymfO7tQPa8kQCGNculrdtmzM=
 
 Name: assets/pages/main/main.lua
-SHA1-Digest: vTgHBGuWvBvY//2pfsInYorYmJc=
+SHA1-Digest: dc4qmMw4dV/xhYZDfj63DPO7tcA=
 
 Name: res/drawable/ic_ripple_accent.xml
 SHA1-Digest: bcXNoHOwp6H4OwSlKsOE/ypf9xI=
@@ -305,6 +308,9 @@ SHA1-Digest: Bk3SuVXSTanOZwXCPj6uDbO82Wg=
 
 Name: res/drawable/abc_ic_ab_back_material.xml
 SHA1-Digest: F3gM5/KciIs7hii+vkSjrG4xrdE=
+
+Name: lua/chinese_module/README.md
+SHA1-Digest: wEBOO0JyiPIT6BMPoU+Ruo13Yvs=
 
 Name: res/color/mtrl_tabs_legacy_text_color_selector.xml
 SHA1-Digest: SnRFQKfmo+x9jIi5gLfiIIqU0mM=
@@ -766,7 +772,7 @@ Name: res/layout/test_action_chip.xml
 SHA1-Digest: ntnEqOLNaHpHtyrSrXvafnnJZv8=
 
 Name: assets/app.json
-SHA1-Digest: im8hJv8ORBJcoG40nWuPiY30JfQ=
+SHA1-Digest: 0Yd91OyylJPhCnb3d1vNCP5XTVc=
 
 Name: lua/hex.lua
 SHA1-Digest: 21X8m8/lABH4IZxN2UrGuVJGZa0=
@@ -1261,7 +1267,7 @@ Name: res/drawable-xhdpi-v4/abc_list_pressed_holo_dark.9.png
 SHA1-Digest: t9VPTdr90769IpmI7+HjcPqUbI0=
 
 Name: AndroidManifest.xml
-SHA1-Digest: Kw3M263Nf0PfS0iiu2ZGW9t1AM4=
+SHA1-Digest: q7JROe1ix0gWse+74vcoSlYByyk=
 
 Name: res/drawable-hdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png
 SHA1-Digest: B8/7flzGxBms5IrFKYqBUqyLWuI=
@@ -1439,6 +1445,9 @@ SHA1-Digest: pVqFkdHOkT8lyUxfefHnPwua/9c=
 Name: res/drawable-xhdpi-v4/abc_ic_star_black_36dp.png
 SHA1-Digest: lP85nXzNzaRJULgljjBQBBKL824=
 
+Name: lua/chinese_module/_autoload.lua
+SHA1-Digest: swedgXW9tmpvu84OhVpdGQRl3/U=
+
 Name: res/drawable-mdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
 SHA1-Digest: AfbQuyZF1JMvjiaXDfLvtNLgncI=
 
@@ -1456,6 +1465,9 @@ SHA1-Digest: xTi2bHEQyjoCjM/kItDx+iAKmTU=
 
 Name: res/color/mtrl_filled_stroke_color.xml
 SHA1-Digest: jDZQEyBpiVkgT4nrErFOBTuTGnw=
+
+Name: lua/chinese_module/module.lua
+SHA1-Digest: UWV+0o+1Qrh3lvL+KQtK4rldFRE=
 
 Name: res/color/material_on_surface_stroke.xml
 SHA1-Digest: oCGhCzfqvI6opefBEgf1k7yWYrs=

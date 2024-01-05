@@ -1,6 +1,6 @@
 Signature-Version: 1.0
 Created-By: 1.0 (Android SignApk)
-SHA1-Digest-Manifest: 15VrgDTy/Uzw05nn0UDFvbHo3yw=
+SHA1-Digest-Manifest: cXEeUz3ZWPalFnJBYEOuqsjyN7Q=
 
 Name: res/color/material_on_surface_disabled.xml
 SHA1-Digest: aLBdJisoYtyR0KfvhTauiMb1kYs=
@@ -82,6 +82,9 @@ SHA1-Digest: G/gUzSRUYoDbbL093jEzXnnbunU=
 
 Name: res/anim/btn_radio_to_off_mtrl_ring_outer_animation.xml
 SHA1-Digest: B747CE76wevyjScFVwpxJtDCmrI=
+
+Name: lua/chinese_module/config.json
+SHA1-Digest: 5VkNw17s+FEIlCVMnd/RLKD19f4=
 
 Name: res/drawable-hdpi-v4/abc_ic_star_half_black_48dp.png
 SHA1-Digest: ITuAj9GLxIU8m+qyHDgR794ap3w=
@@ -243,7 +246,7 @@ Name: res/drawable-xxhdpi-v4/abc_scrubber_control_to_pressed_mtrl_005.png
 SHA1-Digest: mn9silK1Kz/x6FpOnam2pfxvaFw=
 
 Name: assets/pages/main/main.lua
-SHA1-Digest: uOhe1yuFOoZdQEioAcom5CjLGB4=
+SHA1-Digest: bRXgc5V0XenqQB63GwtZsdV7Rz4=
 
 Name: res/drawable/ic_ripple_accent.xml
 SHA1-Digest: nCzK9IU0wRt8V+4AKtUgxM85BBo=
@@ -295,6 +298,9 @@ SHA1-Digest: waHNFpGNH1HonFUlU98ixnC4xXI=
 
 Name: res/drawable/abc_ic_ab_back_material.xml
 SHA1-Digest: wmEBX3KqebrJ7YzZCA61FzvJc8o=
+
+Name: lua/chinese_module/README.md
+SHA1-Digest: sldZOcJEONvP2MIEom3EI421zsU=
 
 Name: res/color/mtrl_tabs_legacy_text_color_selector.xml
 SHA1-Digest: NXCLx8RtKJ2qgneqKVGcLcTTzNw=
@@ -744,7 +750,7 @@ Name: res/layout/test_action_chip.xml
 SHA1-Digest: /s5jJjDj3awrXBNUWdKgKzVObhI=
 
 Name: assets/app.json
-SHA1-Digest: Csj6/zbVKcQ0SMDxPe+xxyvT3Gg=
+SHA1-Digest: LIDNod6dKA5uTWocyByt7PaXBqw=
 
 Name: lua/hex.lua
 SHA1-Digest: L8oKZ/KXodaFS6xBd60cr8yELhA=
@@ -1227,7 +1233,7 @@ Name: res/drawable-xhdpi-v4/abc_list_pressed_holo_dark.9.png
 SHA1-Digest: CWlG2ZRWkmMjz/kpuIT6MbBkT+M=
 
 Name: AndroidManifest.xml
-SHA1-Digest: ninj7snPh7VrT4pmsuxlXVjCOAo=
+SHA1-Digest: xzIIXfmZDhphGUb/DltGB/DX4SA=
 
 Name: res/drawable-hdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png
 SHA1-Digest: cC8LhJBCjD2FEzumUyFT7CZoqAo=
@@ -1403,6 +1409,9 @@ SHA1-Digest: OTc02nTGRPxOgkrc5dXa6qi7h+c=
 Name: res/drawable-xhdpi-v4/abc_ic_star_black_36dp.png
 SHA1-Digest: ingvV99yU8o+utOuZ5On3REh0eY=
 
+Name: lua/chinese_module/_autoload.lua
+SHA1-Digest: XJupr0wzb1E3lGUlo3CVsbQSsO4=
+
 Name: res/drawable-mdpi-v4/abc_ic_menu_cut_mtrl_alpha.png
 SHA1-Digest: fnkne9XWnuqM1yhMI+5Xc4n/ET8=
 
@@ -1420,6 +1429,9 @@ SHA1-Digest: bWeoZCU9ATEAfis5P+TKeyLQFwM=
 
 Name: res/color/mtrl_filled_stroke_color.xml
 SHA1-Digest: mESgwEwp/tmphQLvHJLcuIQxhYY=
+
+Name: lua/chinese_module/module.lua
+SHA1-Digest: h48LEH946taQixeGxT9Sb4TYKY4=
 
 Name: res/color/material_on_surface_stroke.xml
 SHA1-Digest: QgPGaqofDO3Bw0q9UASHNLieGjw=

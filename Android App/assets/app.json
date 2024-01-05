@@ -1,5 +1,7 @@
 {
-    "modules": [],
+    "modules": [
+        "chinese_module"
+    ],
     "name": "星墙",
     "packageName": "myapp.xingqiang",
     "theme": "Default_Light.json",
