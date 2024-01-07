@@ -772,7 +772,7 @@ Name: res/layout/test_action_chip.xml
 SHA1-Digest: ntnEqOLNaHpHtyrSrXvafnnJZv8=
 
 Name: assets/app.json
-SHA1-Digest: 0Yd91OyylJPhCnb3d1vNCP5XTVc=
+SHA1-Digest: tWxnNqIB3Dr9Yjp0n6Hol36SqBc=
 
 Name: lua/hex.lua
 SHA1-Digest: 21X8m8/lABH4IZxN2UrGuVJGZa0=
@@ -875,7 +875,7 @@ Name: res/drawable-xxhdpi-v4/abc_list_longpressed_holo.9.png
 SHA1-Digest: VJa6PrhxyIRS2huzDuIN1KH+I2c=
 
 Name: assets/icon.png
-SHA1-Digest: 5CTOfd53GzUg0OPw1ELl7T3VlsA=
+SHA1-Digest: mBBGXoFcRDPWNeM98acKmZ9MpUM=
 
 Name: res/layout/mtrl_picker_text_input_date.xml
 SHA1-Digest: AKgrzchuoDIGZm0FrDzJsaprCUU=
@@ -900,7 +900,7 @@ Name: res/drawable-mdpi-v4/notification_bg_low_pressed.9.png
 SHA1-Digest: 58BeVrWmam0XTYtOcBJSh3YmiJQ=
 
 Name: res/drawable/icon.png
-SHA1-Digest: 5CTOfd53GzUg0OPw1ELl7T3VlsA=
+SHA1-Digest: mBBGXoFcRDPWNeM98acKmZ9MpUM=
 
 Name: res/color/mtrl_text_btn_text_color_selector.xml
 SHA1-Digest: PtJ6PbF2kh39PMK/3MZVfTB0QO8=
@@ -1267,7 +1267,7 @@ Name: res/drawable-xhdpi-v4/abc_list_pressed_holo_dark.9.png
 SHA1-Digest: t9VPTdr90769IpmI7+HjcPqUbI0=
 
 Name: AndroidManifest.xml
-SHA1-Digest: q7JROe1ix0gWse+74vcoSlYByyk=
+SHA1-Digest: eplCMqu0BwhGsGWqgRoXSTrTlC4=
 
 Name: res/drawable-hdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png
 SHA1-Digest: B8/7flzGxBms5IrFKYqBUqyLWuI=

@@ -1,6 +1,6 @@
 Signature-Version: 1.0
 Created-By: 1.0 (Android SignApk)
-SHA1-Digest-Manifest: cXEeUz3ZWPalFnJBYEOuqsjyN7Q=
+SHA1-Digest-Manifest: jxh//WObia/zKhYZ2kSAGmZlkxM=
 
 Name: res/color/material_on_surface_disabled.xml
 SHA1-Digest: aLBdJisoYtyR0KfvhTauiMb1kYs=
@@ -750,7 +750,7 @@ Name: res/layout/test_action_chip.xml
 SHA1-Digest: /s5jJjDj3awrXBNUWdKgKzVObhI=
 
 Name: assets/app.json
-SHA1-Digest: LIDNod6dKA5uTWocyByt7PaXBqw=
+SHA1-Digest: qKnEvhVhZ1C49ozd1glpoczs/XQ=
 
 Name: lua/hex.lua
 SHA1-Digest: L8oKZ/KXodaFS6xBd60cr8yELhA=
@@ -852,7 +852,7 @@ Name: res/drawable-xxhdpi-v4/abc_list_longpressed_holo.9.png
 SHA1-Digest: 2lRuxodMxnuWn+IclaJShuAV5+Y=
 
 Name: assets/icon.png
-SHA1-Digest: /ne8sGz59VlsQ0YEf3+zENnyYUI=
+SHA1-Digest: rrOwNEhR2+kndG4uxTWAyGt1KDg=
 
 Name: res/layout/mtrl_picker_text_input_date.xml
 SHA1-Digest: QEXbaALmO1cyF5NfVgxcjPtRrPg=
@@ -876,7 +876,7 @@ Name: res/drawable-mdpi-v4/notification_bg_low_pressed.9.png
 SHA1-Digest: sZI/MrQgBXh2aJFcQWzZXWRcBz0=
 
 Name: res/drawable/icon.png
-SHA1-Digest: KfxQkugB1ingK5y+j/Td2QuoZdA=
+SHA1-Digest: adW+JKsvILx3kppHMJ4f+3Znbjg=
 
 Name: res/color/mtrl_text_btn_text_color_selector.xml
 SHA1-Digest: +lTs6/2Hew/VACJdKQUTS4fZe0w=
@@ -1233,7 +1233,7 @@ Name: res/drawable-xhdpi-v4/abc_list_pressed_holo_dark.9.png
 SHA1-Digest: CWlG2ZRWkmMjz/kpuIT6MbBkT+M=
 
 Name: AndroidManifest.xml
-SHA1-Digest: xzIIXfmZDhphGUb/DltGB/DX4SA=
+SHA1-Digest: SmAldv8bDkI5RTUXrGPkgGZV1Bc=
 
 Name: res/drawable-hdpi-v4/abc_ab_share_pack_mtrl_alpha.9.png
 SHA1-Digest: cC8LhJBCjD2FEzumUyFT7CZoqAo=
